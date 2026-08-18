@@ -595,3 +595,38 @@ INSERT INTO employees VALUES
    , 121
    , 50
    );
+
+
+##Task/ Activity
+
+##Display all employee details from the employees table.
+select * from employees;
+
+##Display first_name, last_name, and salary from employees.
+select first_name,last_name,salary from employees;
+
+##Display employees whose salary is greater than 8000.
+select * from employees where salary>8000 order by salary asc;
+
+##Display employees who work in department_id 60 and have salary > 5000.
+select * from employees where department_id=60 and salary>5000 order by salary asc;
+
+##Display employee names ordered by hire_date ascending.
+select Concat(First_name,' ' ,Last_name) Employee_name,hire_date from employees order by hire_date asc;
+
+##Display employee names ordered by salary descending.
+select concat(first_name,' ',last_name) employee_name,salary from employees order by salary desc;
+
+##Display employees whose first_name starts with 'A'.
+select UPPER(concat(first_name,' ',last_name)) employee_name from employees where concat(first_name,' ',last_name) like 'A%';
+
+##Display employees hired after '2020-01-01'.
+SELECT * FROM employees where hire_date>'2020-01-01' order by hire_date asc;
+
+##Find departments where manager_id IS NULL.
+select dep.department_name from employees emp inner join departments dep
+where emp.department_id=dep.department_id
+and emp.manager_id is null;
+
+##Display distinct department_ids from employees table.
+select distinct department_id from employees order by department_id;
