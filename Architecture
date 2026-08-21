@@ -1,0 +1,52 @@
+##Architecht of DWH / Medallion in DWH
+---
+config:
+  theme: redux
+  layout: fixed
+---
+flowchart TB
+    n8["<b>LANDING PAD</b><br>(Primary Staging)"] L_n8_n9_0@-- RAW DATA --> n9["<b>DSA</b><br> (Data Staging Area)"]
+    n9 L_n9_n11_0@-- CLEANSED/SCRUBBED --> n11["<b>ODS </b><br>(Operational data Store)"]
+    n11 L_n11_n12_0@-- TRANSFORMED --> n12["<b>EDW/DWH</b><br> (Facts / Dimensions)"]
+    n1["RDBMS"] L_n1_n8_0@--> n8
+    n14[" "] L_n14_n21_0@--> n21["`**REPORTING**`"]
+    n12 L_n12_n14_0@-- Aggregated --> n14
+    n2["Fork/Join"]
+    n3["Bronze Layer"]
+    n4["Fork/Join"]
+    n5["Fork/Join"]
+    n6["Silver Layer"]
+    n10["No History stored"]
+    n13["3-6 months History"]
+    n15["Rectangle"]
+    n16["Marketing"]
+    n17["Sales"]
+    n18["Gold Layer"]
+    n19["`**Data Marts**`"]
+    n20["Fork/Join"]
+    n22["3-5 Years history"]
+
+    n8@{ shape: proc}
+    n1@{ shape: cyl}
+    n14@{ shape: rect}
+    n2@{ shape: fork}
+    n3@{ shape: text}
+    n4@{ shape: fork}
+    n5@{ shape: fork}
+    n6@{ shape: text}
+    n10@{ shape: text}
+    n13@{ shape: text}
+    n15@{ shape: rect}
+    n16@{ shape: rect}
+    n17@{ shape: rect}
+    n18@{ shape: text}
+    n19@{ shape: text}
+    n20@{ shape: fork}
+    n22@{ shape: text}
+
+    L_n8_n9_0@{ animation: slow } 
+    L_n9_n11_0@{ animation: slow } 
+    L_n11_n12_0@{ animation: slow } 
+    L_n1_n8_0@{ animation: slow } 
+    L_n14_n21_0@{ animation: slow } 
+    L_n12_n14_0@{ animation: slow }
