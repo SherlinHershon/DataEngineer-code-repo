@@ -1,0 +1,25 @@
+#FLOWCHART MEDALLION ARCHITECTURE
+---
+config:
+  theme: redux
+  layout: fixed
+---
+flowchart LR
+    SOURCE["`**SOURCE DATA**    (**SOE**)`"] L_SOURCE_n1_0@-- INGESTION --- n1["`**DATA LAKE/STAGING**`"]
+    n1 L_n1_n2_0@-- CURATION --> n2["`**BRONZE LAYER**`"]
+    n2 L_n2_n3_0@-- TRANSFORM --> n3["`**SILVERLAYER** (**SOR**)`"]
+    n2 L_n2_n4_0@--> n4["`**DATA LAKEHOUSE**`"]
+    n4 L_n4_n3_0@--> n3
+    n3 L_n3_n5_0@-- AGGREGATE --> n5["`**GOLD LAYER**`"]
+    n5 L_n5_n6_0@-- CONSUME --> n6["`**BI /ANALYST BUSINESS** (**SOI**)`"]
+    n3 L_n3_n7_0@--> n7["`**INTERNAL TESTING**`"]
+
+
+    L_SOURCE_n1_0@{ animation: slow } 
+    L_n1_n2_0@{ animation: slow } 
+    L_n2_n3_0@{ animation: slow } 
+    L_n2_n4_0@{ animation: slow } 
+    L_n4_n3_0@{ animation: slow } 
+    L_n3_n5_0@{ animation: slow } 
+    L_n5_n6_0@{ animation: slow } 
+    L_n3_n7_0@{ animation: slow }
