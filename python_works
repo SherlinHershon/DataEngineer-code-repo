@@ -81,3 +81,65 @@ print(a+b)#Fail
 #String a='ten'
 #Integer b=10
 #System.out.println(a+b) # This works in java, because it is weakly typed language
+--------------------------------------------------------------------------------------
+##Exercise till Now
+#A. Python is an indent based programming language
+#The following program throws an indentation error. Correct it and make sure it prints properly.
+'''
+teams = ['Data', 'AI', 'DevOps']
+for t in teams:
+print('Hello', t, 'Team from Inceptez Technologies')
+  print('Keep Learning and Exploring!')'''
+
+
+teams = ['Data', 'AI', 'DevOps']
+for t in teams:
+    print('Hello', t, 'Team from Inceptez Technologies')
+print('Keep Learning and Exploring!')
+
+#B. Commented line in Python
+#Use Case 1:
+#Add single-line and multi-line comments to describe what the below code does for Inceptez Technologies’ training tracker.
+
+"""students = 100
+trainers = 2
+total = students + trainers
+print(total)"""
+
+students = 100 #No if studennts in inceptez"
+trainers = 2
+total = students + trainers
+print(total)
+
+#Use Case 2:
+#Convert the below block into a “dead code” using comments, then re-activate it later to print
+
+#print("Welcome to Inceptez Python Learning")
+
+'''
+print("Welcome to Inceptez Python Learning")'''
+
+
+print("Welcome to Inceptez Python Learning")
+
+"""
+C. Playing with Quotes
+Use Case 1:
+Create three string variables that correctly store and print:
+
+This is Inceptez's "Python" class for Data Engineers & AI Engineers
+→ Use single, double, and triple quotes appropriately."""
+
+print("""This is Inceptez's "Python" class for Data Engineers & AI Engineers""")
+
+#Use Case 2:
+#Write a multiline string using triple quotes that prints:
+
+#Welcome to Inceptez Technologies!
+#Python Training: Basics
+#Enjoy your learning journey.
+
+print("""Welcome to Inceptez Technologies!\n
+    Python Training: Basics\n
+    Enjoy your learning journey.""")
+----------------------------------------------------------------------------------------
