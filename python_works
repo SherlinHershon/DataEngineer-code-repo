@@ -356,7 +356,28 @@ list_cols_tuple_records=[(1225655944140,'Business',36684.82,358),
 for row in list_cols_tuple_records:#select * from  odsdb_Rathan.ods_accounts
     if row[0]==1225655944140:#where accountid=1225655944140
         print(row)
+------------------------------------------------------------------------------------
+Exercises
 
+#D. Let's learn all about VARIABLES
+#Use Case 1:
+#Declare variables to store the following details:
+'''- Student Name
+- Course Name (e.g., “Python Fundamentals”)
+- Training Institute Name (Inceptez Technologies)
+
+Then print a formatted message:
+
+Name: Arun is learning the course Python Fundamentals at the institute Inceptez Technologies
+'''
+
+Student_Name = "Hershon"
+Course_Name = "Multi Cloud AI Engineer"
+Training_Institute_Name = "Inceptez Technologies"
+
+#print(Student_Name 'is learning the course'  Course_Name 'at the institute' Training_Institute_Name)
+
+print(Student_Name,'is learning the course',Course_Name,'at the institute', Training_Institute_Name)
 
 
 
