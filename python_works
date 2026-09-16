@@ -379,5 +379,115 @@ Training_Institute_Name = "Inceptez Technologies"
 
 print(Student_Name,'is learning the course',Course_Name,'at the institute', Training_Institute_Name)
 
+#Use Case 2:
+#Demonstrate dynamic inference, dynamic typing using with fee by applying .18 gst
+#and prove strongly typing character also by operating it with Eighteen percent gst
+#fee = 45000
+from traceback import print_tb
 
+fees = 45000 # we no need to type the data type automatically it will detect dynamically infereced
+#gst = 0.18
+gst = 'Eighteen percent'
+print(type(fees)) #python will automatically detect the datatype dynamically typing
+print(type(gst))
+print  (fees+gst) #strongly typed we can add sting and int
+
+#E. Variables Naming Conventions
+#Use Case 1:
+#Identify which variable names below are invalid for Inceptez’s student database:
+
+1) 2student = 'Ravi' '''incorrect'''
+2) _student_id = 1001  '''incorrect'''
+3) studentName = 'Priya'
+4) class name = 'Python'
+5) inceptez_batch = 'Morning'
+
+Use Case 2:
+Declare 3 variables following naming styles for Inceptez projects:
+
+PascalCase: DataEngineeringBatch
+camelCase: dataEngineeringBatch
+snake_case: data_engineering_batch
+
+#F. Type identification & Casting
+#Use Case 1:
+#Write a program that asks for an employee’s age.
+#1. Checks its type is of string (think about using isinstance() function)
+#2. Converts it to int (continue writing your program from here..)
+#3. Prints the years pending for retirement, for eg. 60 is the retirement age.
+#Example:
+#Enter your age: 40
+#You will retire in 20 years at Inceptez Technologies.
+
+age=int(input("Enter Your Age"))
+retirement=60
+print(isinstance(age,str))
+remaining_age = retirement-age
+print(f"You will retire in {remaining_age} at inceptez")
+
+#Use Case 2 (Debug):
+#Fix the type error in the following code for salary calculation:
+
+#salary = '50000'
+#bonus = 10000
+#print('Total Salary in Inceptez:', salary + bonus)
+
+salary = '50000'
+bonus = 10000
+print(isinstance(salary,int))
+print('Total Salary in Inceptez:', int(salary) + bonus)
+
+
+#G. Data types and casting
+#Use Case 1 — Employee Salary Breakdown Using Numeric & String Types
+#Employee Salary Breakdown
+#a. Write a program that asks the user for:
+#employee_name (string)
+#base_salary (float)
+#hra_percent (integer)
+#bonus_amount (float)
+
+#B. Convert inputs to the correct datatype if required.
+#Calculate:
+ #HRA = base_salary * (hra_percent / 100)
+ #Total Salary = base_salary + HRA + bonus_amount
+
+Employee_Name=str(input("Enter Employee Name"))
+base_salary = float(input("Enter Base Salary"))
+hra_percent=int(input("Enter Hra Percent"))
+bonus_amount = float(input("Enter Bonus Amount"))
+
+HRAs= base_salary*(hra_percent/100)
+total_salary = base_salary + bonus_amount +HRAs
+print(f"Employee : {Employee_Name}")
+print(f"Base Salary : {base_salary}")
+print(f"Hra @ {hra_percent} : {HRAs}")
+print(f"Total Salary payable : {total_salary}")
+
+#Use Case 2: Student Result Classification
+#a. Write a program that takes marks as input (initially as a string).
+#B. Check if the value can be converted to float.
+##C. Then classify (try using if condition with the help of AI, however we will learn about if condition soon):
+#Marks >= 90 --> Outstanding
+# Marks >= 75 --> Excellent
+# Marks >= 50 --> Pass
+# Marks < 50 --> Fail
+#D. If the input is not numeric, print:
+# Invalid marks entered — Please provide numeric input.
+
+try:
+    Mark=int(input("Enter Your Marks"))
+
+    if Mark>=90:
+        print("You are Outstanding")
+    elif Mark>=75:
+        print("You are Excellent")
+    elif Mark>=50:
+        print("You got passed")
+    else:
+        print("You got failed")
+except ValueError:
+    print("Invalid Mark entered . please enter a numeric value")
+
+--------------------------------------------------------------------------------------------------------------------
 
