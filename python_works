@@ -491,3 +491,70 @@ except ValueError:
 
 --------------------------------------------------------------------------------------------------------------------
 
+#13/09/2026
+#Operators & Precedence
+#Four major operators are - Assignment, Arithmetic, Relational/Comparison, Logical, unary, binary, ternary, bitwise
+x=10#assignment
+y=x*x#arithmetic
+print(x>y)#relational
+print(x>y or x==y)#logical
+
+#Assignment operators (=)
+age = 40
+name = input("Enter your name:")
+sal=10000
+bonus=1000
+calc_sal = sal + bonus
+none_assignment1 = None
+none_assignment2 = print("hello")
+
+#Assignment with arithmetic operations to accumulate values
+hike=2000
+sal = sal + hike#year1
+sal = sal + hike#year2
+#or
+sal += hike#year3 (equivalent to sal = sal + hike) - take sal add with hike and assign result to sal
+sal += hike#year4
+
+#Arithmetic Operators
+# -+*/ // ** % ^
+sal=100000
+hike=10000
+pf=5000
+lpa=sal*12
+print("basic arithmetic operators")
+print(sal+hike, sal-pf, lpa, lpa/4)
+print("additional arithmetic operators","% // **  ^")
+print("modulo % - return reminder part")
+x=10%3
+print(x)
+print("floor division // - returns quotient part")
+x=10//3
+print(x)
+
+print("exponent/power ** - returns the power of a number")
+x=10**3
+print(x)
+
+#Relational/Comparison Operators (==, !=, >=, <=, >, <)
+x=10
+y=20
+print(x==y, x!=y, x>=y, x<=y, x>y, x<y)
+print(x>y); print(not(x>y))
+
+#Logical operators (and or not)
+x=10
+print(not(x+3>2 and 10>x and 3>50 or 5>10))
+
+#Saravanan -> pen or pencil or sharpinar or remote
+#Saravanan -> (pen and pencil) or sharpinar or remote
+#Saravanan -> not((bug1 and bug2) or bug3 or bug4)
+
+if (True and True) or True or False:
+    print(True)
+
+#BODMAS (Brackets, Orders (power/exponents), Division/Multiplication, Add/Sub)
+a=10+3*5**2/5-3
+
+
+
