@@ -557,4 +557,26 @@ if (True and True) or True or False:
 a=10+3*5**2/5-3
 
 
+#Use Case 3: Bug Fixing — Datatype Mismatch
+#The below code is intended to calculate total price, but it has datatype errors. Fix it.
+#Incorrect code:
+#item_name = input("Enter product name: ")
+# price = input("Enter price per item: ")
+# quantity = input("Enter quantity: ")
+##total_cost = price * quantity
+#print("You purchased " + quantity + " units of " + item_name)
+ #print("Total payable: " + total_cost)
+#Expected output after fixing:
+##Enter product name: Notepad
+ #Enter price per item: 35.50
+ #Enter quantity: 3
+#You purchased 3 units of Notepad
+# Total payable: 106.5 INR
+
+item_name = input("Enter product name: ")
+price = float(input("Enter price per item: "))
+quantity = int(input("Enter quantity: "))
+total_cost = price * quantity
+print("You purchased " , quantity , " units of " + item_name)
+print("Total payable: ",  total_cost)
 
